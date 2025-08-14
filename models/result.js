@@ -18,7 +18,8 @@ const result = sequelize.define('result',{
     },
     Max_marks:{
         type:DataTypes.DECIMAL,
-        allowNull:false
+        allowNull:false,
+        defaultValue:100
     }
 })
 student.hasMany(result,{foreignKey:'studentID',onDelete:'CASCADE'});

@@ -8,7 +8,13 @@ const user = require("./models/user")
 const student = require("./models/student")
 const app = express();
 
+const {authRoutes , studentRoutes , resultRoutes }=require("./routes");
+
 app.use(cors());
+app.use(express.json());
+app.use('/api/auth/',authRoutes);
+app.use('/api/student',studentRoutes);
+app.use('/api/result',resultRoutes);
 
 // test routes 
 app.get('/',(req,res)=>{
