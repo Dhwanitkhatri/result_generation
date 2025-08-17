@@ -26,6 +26,7 @@ git clone https://github.com/Dhwanitkhatri/result_generation
 cd result_generation
 npm install
 cp .env.example .env   # create your own .env file with DB credentials
+node seed.js # to add the dummy data 
 npm run dev
 ````
 
