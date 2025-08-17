@@ -9,6 +9,7 @@ const student = require("./models/student")
 const app = express();
 
 const {authRoutes , studentRoutes , resultRoutes }=require("./routes");
+const { FORCE } = require("sequelize/lib/index-hints");
 
 app.use(cors());
 app.use(express.json());
@@ -24,7 +25,7 @@ app.get('/',(req,res)=>{
 sequelize.authenticate()
 .then(()=>{
     console.log("database connected successfully ");
-    return sequelize.sync({alter:true})
+    return sequelize.sync({alter:true},{force: true})
 })
 .then(()=>{
     console.log("all models are synced  ")
