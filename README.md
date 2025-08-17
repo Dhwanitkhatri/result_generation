@@ -10,7 +10,7 @@ This API also calculates total marks and grade percentage for students automatic
 - Add, update, delete, and view students
 - Generate and view student results
 - Calculate total marks and grade percentage
-- Role-based authentication (admin, faculty, student)
+- Role-based authentication (admin,  student)
 - Secure routes using JWT
 
 ## Technologies Used
